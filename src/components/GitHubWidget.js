@@ -10,8 +10,8 @@ class GitHubWidget extends Component {
         this.state = {
             list: [],
             inputTextValue: 'java',
-            placeholder: 'put your topic here',
-            topic: 'java'
+            placeholder: 'put your topic here'
+
         }
 
     }
@@ -22,9 +22,9 @@ class GitHubWidget extends Component {
 
     getTopics = () => {
 
-        const request = 'https://api.github.com/search/repositories?q=topic:' + this.state.inputTextValue;
+        const request = 'https://api.github.com/search/repositories?q=topic:';
 
-        axios.get(request).then(response => {
+        axios.get(request + this.state.inputTextValue).then(response => {
 
             this.setState({ list: response.data.items });
 
@@ -35,7 +35,6 @@ class GitHubWidget extends Component {
 
     onClick = (event) => {
         event.preventDefault();
-        this.setState({ topic: this.state.inputTextValue })
         this.getTopics();
 
     }
