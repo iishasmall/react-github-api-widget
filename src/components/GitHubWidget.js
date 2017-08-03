@@ -61,34 +61,20 @@ class GitHubWidget extends Component {
             paddingBottom: 30
         }
 
-        const textAreaStyle = {
-            justifyContent: 'center',
-            width: 500,
-            height: 300,
-            background: 'red',
-            overflow: 'hidden',
-            overflowY: 'scroll'
-        }
-
-        const headerStyle = {
-            color: '#ffffff'
-        }
-
         const headerTxt = "Github Repo Widget";
-
         const subheadTxt = "Enter your repo topic here";
 
         return (
 
             <div style={widgetStyle}>
-                <Header style={headerStyle} header={headerTxt} subhead={subheadTxt} />
+                <Header header={headerTxt} subhead={subheadTxt} />
                 <div style={inputContainerStyle} >
                     <InputText
                         placeholder={this.state.placeholder}
                         onChange={this.onChange}
                         onClick={this.onClick} />
                 </div>
-                <TextArea style={textAreaStyle} list={this.state.list} />
+                <TextArea list={this.state.list} />
 
             </div >
         )
