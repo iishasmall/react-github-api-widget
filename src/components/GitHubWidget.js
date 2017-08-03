@@ -55,12 +55,6 @@ class GitHubWidget extends Component {
             borderRadius: '6px'
         }
 
-        const inputContainerStyle = {
-            display: 'inline-flex',
-            justifyContent: 'center',
-            paddingBottom: 30
-        }
-
         const headerTxt = "Github Repo Widget";
         const subheadTxt = "Enter your repo topic here";
 
@@ -68,12 +62,12 @@ class GitHubWidget extends Component {
 
             <div style={widgetStyle}>
                 <Header header={headerTxt} subhead={subheadTxt} />
-                <div style={inputContainerStyle} >
-                    <InputText
-                        placeholder={this.state.placeholder}
-                        onChange={this.onChange}
-                        onClick={this.onClick} />
-                </div>
+
+                <InputText
+                    placeholder={this.state.placeholder}
+                    onChange={this.onChange}
+                    onClick={this.onClick} />
+
                 <TextArea list={this.state.list} />
 
             </div >
