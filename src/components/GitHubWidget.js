@@ -83,7 +83,7 @@ class GitHubWidget extends Component {
             <div style={widgetStyle}>
                 <Header style={headerStyle} header={headerTxt} subhead={subheadTxt} />
                 <div style={inputContainerStyle} >
-                    <InputText text={this.state.text}
+                    <InputText
                         placeholder={this.state.placeholder}
                         onChange={this.onChange}
                         onClick={this.onClick} />
